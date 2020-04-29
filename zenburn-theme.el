@@ -885,12 +885,12 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(jabber-title-large ((t (:height 1.3 :weight bold))))
 ;;;;; js2-mode
    `(js2-warning ((t (:underline ,zenburn-orange))))
-   `(js2-error ((t (:foreground ,zenburn-red :weight bold))))
+   `(js2-error ((t (:foreground ,zenburn-red+1 :weight bold))))
    `(js2-jsdoc-tag ((t (:foreground ,zenburn-green-2))))
    `(js2-jsdoc-type ((t (:foreground ,zenburn-green+2))))
    `(js2-jsdoc-value ((t (:foreground ,zenburn-green+3))))
    `(js2-function-param ((t (:foreground, zenburn-orange))))
-   `(js2-external-variable ((t (:foreground ,zenburn-orange))))
+   `(js2-external-variable ((t (:foreground ,zenburn-yellow))))
 ;;;;; additional js2 mode attributes for better syntax highlighting
    `(js2-instance-member ((t (:foreground ,zenburn-green-2))))
    `(js2-jsdoc-html-tag-delimiter ((t (:foreground ,zenburn-orange))))
