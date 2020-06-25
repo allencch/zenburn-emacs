@@ -1515,7 +1515,7 @@ Also bind `class' to ((class color) (min-colors 89))."
 ;;;;; whitespace-mode
    `(whitespace-space ((t (:background ,zenburn-bg-05 :foreground ,zenburn-bg+2))))
    `(whitespace-hspace ((t (:background ,zenburn-bg-05 :foreground ,zenburn-bg+2))))
-   `(whitespace-tab ((t (:background ,zenburn-bg-05))))
+   `(whitespace-tab ((t (:background ,zenburn-bg-05 :foreground, zenburn-bg+2))))
    `(whitespace-newline ((t (:foreground ,zenburn-bg+1))))
    `(whitespace-trailing ((t (:background ,zenburn-red))))
    `(whitespace-line ((t (:background ,zenburn-bg :foreground ,zenburn-magenta))))
