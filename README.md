@@ -1,7 +1,8 @@
+# zenburn-theme for Emacs
+
 [![License GPL 3][badge-license]](http://www.gnu.org/licenses/gpl-3.0.txt)
 [![MELPA](http://melpa.org/packages/zenburn-theme-badge.svg)](http://melpa.org/#/zenburn-theme)
 [![MELPA Stable](http://stable.melpa.org/packages/zenburn-theme-badge.svg)](http://stable.melpa.org/#/zenburn-theme)
-[![Patreon](https://img.shields.io/badge/patreon-donate-orange.svg)](https://www.patreon.com/bbatsov)
 
 ## About
 
@@ -12,11 +13,22 @@ that of its many users I presume) that it's one of the best low
 contrast color themes out there and that it is exceptionally easy on
 the eyes.
 
-This theme uses the "new" (it used to be new several years ago when I
-created this package) built-in theming support available starting with
+This theme uses the "new"[^1] built-in theming support available starting with
 Emacs 24.1.
 
+[^1]: It used to be new in 2010 when I created this package.
+
 ![Overview screenshot](screenshots/overview.png)
+
+------------
+[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/C0C2204SR)
+[![Patreon](https://img.shields.io/badge/patreon-donate-orange.svg)](https://www.patreon.com/bbatsov)
+
+You can support the development of Zenburn for Emacs via
+[GitHub Sponsors](https://github.com/sponsors/bbatsov),
+[ko-fi](https://ko-fi.com/bbatsov),
+[PayPal](https://www.paypal.me/bbatsov) and
+[Patreon](https://www.patreon.com/bbatsov).
 
 ## Installation
 
@@ -35,7 +47,7 @@ Now you can load the theme with the interactive function `load-theme` like this:
 
 ### Package.el
 
-Zenburn is available in both [MELPA Stable](http://stable.melpa.org)
+Zenburn is available in [NonGNU ELPA](https://elpa.nongnu.org/), [MELPA Stable](http://stable.melpa.org)
 and [MELPA](http://melpa.org).
 
 You can install `zenburn` with the following command:
@@ -46,6 +58,14 @@ To load it automatically on Emacs startup add this to your init file:
 
 ```lisp
 (load-theme 'zenburn t)
+```
+
+If you prefer to use `use-package` just add the following:
+
+``` emacs-lisp
+(use-package zenburn-theme
+  :config
+  (load-theme 'zenburn t))
 ```
 
 ### Emacs Prelude
@@ -62,6 +82,24 @@ Users of Debian 9 or later or Ubuntu 16.10 or later may simply
 `apt-get install elpa-zenburn-theme`.
 
 ## Customization
+
+### Custom faces
+
+If want to change some faces you can do it
+with `custom-theme-set-faces` or `use-package`. Here's an example:
+
+``` emacs-lisp
+(use-package zenburn-theme
+  :preface
+  (setq my/zenburn-colors-alist
+        '((fg . "#DCDCCC") (bg . "#1C1C1C") (cyan . "#93E0E3")))
+  :custom-face
+  (region ((t (:background ,(alist-get my/zenburn-colors-alist 'cyan)))))
+  :config
+  (load-theme 'zenburn t))
+```
+
+See [this article](https://emacsredux.com/blog/2025/02/13/customizing-color-themes/) for more details.
 
 ### Custom colors
 
@@ -128,7 +166,30 @@ included upstream don't hesitate to send me a patch or even better - a
 GitHub pull request. [These](https://github.com/bbatsov/zenburn-emacs/contributors)
 contributors have done so.
 
-You can support my work on Zenburn and [all my other projects](https://github.com/bbatsov)
-via [Patreon](https://www.patreon.com/bbatsov).
+## Donate
+
+You can support my work on Zenburn and [all my other OSS projects](https://batsov.com/projects)
+via the following platforms:
+
+* [GitHub Sponsors](https://github.com/sponsors/bbatsov)
+* [ko-fi](https://ko-fi.com/bbatsov)
+* [PayPal](https://www.paypal.me/bbatsov)
+* [Patreon](https://www.patreon.com/bbatsov)
+
+## Contributors
+
+Here's a [list](https://github.com/bbatsov/zenburn-emacs/contributors) of all the people who have contributed to the
+development of Zenburn for Emacs.
+
+## Changelog
+
+A fairly extensive changelog is available [here](CHANGELOG.md).
+
+## License
+
+Copyright © 2010-2024 Bozhidar Batsov and
+[contributors](https://github.com/bbatsov/zenburn-emacs/contributors).
+
+Distributed under the GNU General Public License, version 3
 
 [badge-license]: https://img.shields.io/badge/license-GPL_3-green.svg
